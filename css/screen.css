@@ -221,6 +221,15 @@ a:focus {
     padding: 0 24px;
 }
 
+.c-quote {
+    font-family: "droid-serif", serif;
+    background: #F2FAF8;
+    color: #00B37D;
+    padding: 24px 24px 24px 0px;
+    margin: 48px 0px;
+    border-radius: 5px;
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 
@@ -354,4 +363,8 @@ a:focus {
 
 .u-max-width-sm {
     min-width: 36em;
+}
+
+.u-mb-clear {
+    margin-bottom: 0px;
 }
