@@ -27,13 +27,11 @@ html {
     font-size: 16px;
     line-height: 1.5;
     color: #5C6366;
-    padding: 48px 24px 24px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    max-width: 42em;
     margin: 0 auto;
 }
 
@@ -172,32 +170,55 @@ a:focus {
     Component; Author
 */
 
-.c-author{
+.c-author {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
     gap: 16px;
 }
 
-.c-author__avatar{
+.c-author__avatar {
     width: 56px;
     height: 56px;
     border-radius: 100%;
 }
 
 .c-author__name,
-.c-author__title{
+.c-author__title {
     margin-bottom: 0;
 }
 
-.c-author__title{
+.c-author__title {
+    font-family: "Inter Web", sans-serif;
     font-size: 14px;
-    font-family: "Inter Web",serif;
+    line-height: 24px;
 }
 
-.c-author__name{
+.c-author__name {
     font-size: 16px;
     line-height: 24px;
+}
+
+/* 
+    Component: Article
+*/
+
+.c-article__header,
+.c-article__body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.c-article__header {
+    padding: 24px;
+}
+
+.c-article__title {
+    margin-bottom: 0px;
+}
+
+.c-article__body {
+    padding: 0 24px;
 }
 
 
@@ -208,19 +229,40 @@ a:focus {
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
-    html {
-        padding: 48px 48px 24px;
+    .c-article__header {
+        padding: 48px;
     }
 
-    h1 {
-        font-size: 58px;
-        line-height: 64px;
+    .c-article__body {
+        padding: 24px 48px;
+    }
+
+    .c-article__aside {
+        padding-bottom: 24px;
     }
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .c-author {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .c-article__body {
+        display: flex;
+        gap: 24px;
+    }
+
+    .c-article__aside {
+        width: 25%;
+    }
+
+    .c-article__content {
+        width: 75%;
+    }
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 
@@ -302,4 +344,14 @@ a:focus {
     h3 {
         page-break-after: avoid;
     }
+}
+
+/* 
+    Utilities: max-width
+    ---
+    Utilities classes to put specific max widths onto elements.
+*/
+
+.u-max-width-sm {
+    min-width: 36em;
 }
